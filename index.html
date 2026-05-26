@@ -543,10 +543,10 @@
                 footerPdpa: "ข้อมูลนี้เป็นข้อมูลส่วนบุคคลที่ได้รับการคุ้มครองตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA)",
                 alertEmptyId: "กรุณากรอกเลขประจำตัวประชาชนให้ครบ 13 หลัก",
                 alertEmptyPassport: "กรุณากรอกเลขที่พาสสปอร์ตให้ถูกต้อง",
-                alertNotFound: "ไม่พบข้อมูลนักศึกษาใน Google Sheets กรุณาตรวจสอบเลขที่กรอกใหม่อีกครั้ง หรือติดต่อฝ่ายทะเบียนหลักสูตร BBA",
+                alertNotFound: "ไม่พบข้อมูลนักศึกษา กรุณาตรวจสอบเลขที่กรอกใหม่อีกครั้ง หรือติดต่อ office BBA",
                 saveSuccess: "บันทึกข้อมูลความถูกต้องสำเร็จ! กรุณากดปุ่มด้านล่างเพื่อเลือกวิชาเอก (Major) หรือวิชาเอกคู่ (Double Major) ต่อไปค่ะ/ครับ",
                 saveError: "ระบบได้รับข้อมูลเรียบร้อยแล้ว กำลังนำทางไปยังแบบยื่นเรื่องขอแก้ไขข้อมูล...",
-                connectionError: "เกิดข้อผิดพลาดในการติดต่อฐานข้อมูล โปรดลองเปิดเว็บใหม่อีกครั้ง หรือเช็คสิทธิ์การตั้งค่า Deployment ใน Google Sheet",
+                connectionError: "เกิดข้อผิดพลาดในการติดต่อฐานข้อมูล โปรดลองเปิดเว็บใหม่อีกครั้ง หรือเช็คสิทธิ์การตั้งค่า Deployment",
                 
                 // คำแปลเพิ่มเติมสำหรับหน้าต่างยื่นเรื่องแก้ไข
                 formEditTitle: "ยื่นคำร้องขอแก้ไขข้อมูลส่วนตัว",
@@ -604,7 +604,7 @@
                 labelPassport: "Passport Number",
                 helpPassport: "Enter alphanumeric passport characters as shown in your passport",
                 btnSearchText: "Search Profile",
-                btnSearchingText: "Searching in Google Sheets...",
+                btnSearchingText: "Searching in Database...",
                 errorTitle: "No Record Found",
                 resultTitle: "Student Profile Found",
                 resultSubtitle: "Please carefully review the accuracy of your information below",
@@ -618,7 +618,7 @@
                 footerPdpa: "This personal data is strictly protected under the Personal Data Protection Act (PDPA)",
                 alertEmptyId: "Please enter your 13-digit Thai National ID.",
                 alertEmptyPassport: "Please enter a valid Passport Number.",
-                alertNotFound: "Student record not found in Google Sheets. Please verify your identification number or contact the BBA office.",
+                alertNotFound: "Student record not found. Please verify your identification number or contact the BBA office.",
                 saveSuccess: "Profile confirmed! Please click the button below to specify your Major or Double Major selection.",
                 saveError: "Profile marked as incorrect. Navigating you to the edit submission form...",
                 connectionError: "Failed to connect to database. Please refresh or verify the Deployment settings.",
@@ -639,7 +639,7 @@
                 toastEditSuccess: "Correction request submitted successfully! Registry staff will review and update your record shortly.",
 
                 // หน้าจอสำรวจวิชาเลือก (Survey EN)
-                surveyPlanLabel: "Select Your Preferred Study Track Option",
+                surveyPlanLabel: "Select Your Preferred Study Track Option (Unofficial)",
                 lblPlanSingle: "Single Major (+Minor Track)",
                 descPlanSingle: "Focus on 1 major concentration area and optional minor concentration.",
                 lblPlanDouble: "Double Major Track (Minor Track Disabled)",
@@ -1065,7 +1065,7 @@
             btnIncorrect.disabled = true;
 
             confirmStatus.className = "mt-4 text-center p-4 rounded-xl text-sm font-medium bg-blue-50 text-blue-850 border border-blue-200 animate-pulse";
-            confirmStatus.innerHTML = "กำลังบันทึกคำตอบลงระบบบัญชีรายชื่อกลาง...";
+            confirmStatus.innerHTML = "Saving your answer...";
 
             try {
                 // ส่งค่าสถานะความถูกต้องกลับไปยัง Google Apps Script
